@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат приложение</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .chat-menu {
+            margin-bottom: 20px;
+        }
+
+        .chat-menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .chat-menu li {
+            margin-right: 20px;
+        }
+
+        .chat-menu li a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+        }
+
+        .chat-list .chat-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .chat-list img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Responsive adjustments (example) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Чаты</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Мероприятия</a></li>
+            <li><a href="#">Настройки</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="chat-menu">
+            <ul>
+                <li><a href="#">Избранные</a></li>
+                <li><a href="#">Класс</a></li>
+                <li><a href="#">Учителя</a></li>
+                <li><a href="#">Другое</a></li>
+            </ul>
+        </div>
+        <div class="chat-list">
+            <!-- Здесь будет динамически отображаться список чатов -->
+            <div class="chat-item">
+                <img src="placeholder.jpg" alt="Аватар">
+                <div>
+                    <h3>Имя пользователя</h3>
+                    <p>Последнее сообщение</p>
+                </div>
+            </div>
+            <div class="chat-item">
+                <img src="placeholder.jpg" alt="Аватар">
+                <div>
+                    <h3>Имя пользователя 2</h3>
+                    <p>Последнее сообщение 2</p>
+                </div>
+            </div>
+            <!-- ... больше элементов chat-item ... -->
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
